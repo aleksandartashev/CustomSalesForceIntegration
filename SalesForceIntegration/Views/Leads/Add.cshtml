@@ -1,0 +1,69 @@
+﻿@using SalesForceIntegration.Helpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Create new lead in SFDC
+                </header>
+                <div class="panel-body">
+                    <div class="form">
+                        @using (Html.BeginForm("Add", "Leads", null, FormMethod.Post, new { @class = "form-validate form-horizontal" }))
+                        {
+
+                            @Html.ValidationSummary(true)
+                            @Html.AntiForgeryToken()
+                            <div class="form-group ">
+                                <label for="cname" class="control-label col-lg-2">First Name <span class="required">*</span></label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" id="cname" name="firstname" type="text" required />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="clastname" class="control-label col-lg-2">Last Name <span class="required">*</span></label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" id="clastname" name="lastname" type="text" required />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="cstatus" class="control-label col-lg-2">Status <span class="required">*</span> </label>
+                                <div class="col-lg-10">
+                                    @Html.DropDownList("Status", EnumHelper.GetSelectList(typeof(LeadStatus)), null, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="cemail" class="control-label col-lg-2">E-Mail</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control " id="cemail" type="email" name="email" required />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="ccompany" class="control-label col-lg-2">Company</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control " id="ccompany" type="text" name="company" />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="cphone" class="control-label col-lg-2">Phone</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" id="cphone" name="cphone" type="text" required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-offset-2 col-lg-10">
+                                    <button class="btn btn-primary" type="submit">Save</button>
+                                    <button class="btn btn-default" type="button">Cancel</button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</section>

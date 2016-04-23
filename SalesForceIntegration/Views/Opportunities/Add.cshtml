@@ -1,0 +1,89 @@
+﻿@using SalesForceIntegration.Helpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Create new opportunity in SFDC
+                </header>
+                <div class="panel-body">
+                    <div class="form">
+                        @using (Html.BeginForm("Add", "Opportunities", null, FormMethod.Post, new { @class = "form-validate form-horizontal" }))
+                        {
+
+                            @Html.ValidationSummary(true)
+                            @Html.AntiForgeryToken()
+                            <div class="form-group ">
+                                <label for="cname" class="control-label col-lg-2">Name <span class="required">*</span></label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" id="cname" name="name" type="text" required />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="cclosedate" class="control-label col-lg-2">Close Date <span class="required">*</span></label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" id="cclosedate" name="closedate" type="text" required />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label col-lg-2">Stage <span class="required">*</span> </label>
+                                <div class="col-lg-10">
+                                    @Html.DropDownList("StageName", EnumHelper.GetSelectList(typeof(OpportunityStage)), null, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label col-lg-2">Type <span class="required">*</span> </label>
+                                <div class="col-lg-10">
+                                    @Html.DropDownList("Type", EnumHelper.GetSelectList(typeof(OpportunityType)), null, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="camount" class="control-label col-lg-2">Amount</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control " id="camount" type="text" name="amount" />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label col-lg-2">Stage <span class="required">*</span> </label>
+                                <div class="col-lg-10">
+                                    @Html.DropDownList("LeadSource", EnumHelper.GetSelectList(typeof(OpportunityLeadSource)), null, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="cprobability" class="control-label col-lg-2">Probability</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control " id="cprobability" type="text" name="Probability" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-offset-2 col-lg-10">
+                                    <button class="btn btn-primary" type="submit">Save</button>
+                                    <button class="btn btn-default" type="button">Cancel</button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(function () {
+        $('#cclosedate').datepicker({
+            inline: true,
+            nextText: '&rarr;',
+            prevText: '&larr;',
+            showOtherMonths: true,
+            dateFormat: 'dd/MM/yy',
+            dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+        });
+        $("#cclosedate").datepicker().datepicker("setDate", new Date());
+    });
+</script>
