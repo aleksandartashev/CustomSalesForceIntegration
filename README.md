@@ -17,7 +17,7 @@ Some of the use cases when this kind of project can be used:
 - Enable third party software to access or update Salesforce data e.g. Accounting and DMS systems.
 - Expose Salesforce data, documents or reports to selected website users.
 - Enable back end functionality to set and get Salesforce data as needed.
-- Have an API to pull data and then access third party system e.g. retrieve custommer data from SalesForce and use that customerID to query the SAP system to retrieve all products for that customer.
+- Have an API to pull data and then access third party system e.g. retrieve customer data from SalesForce and use that CustomerID to query the SAP system to retrieve all products for that customer.
 
 
 ----------
