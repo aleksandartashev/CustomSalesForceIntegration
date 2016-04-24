@@ -9,14 +9,14 @@ The SalesForce Toolkits for .NET provide native libraries for interacting with S
 
 **How can this be useful to you or your organization ?**
 
-The key feature of Salesforce is its straightforward manner of extending functionality. Business power users can create new data storage objects, pages, views and reports to support their business. As you can imagine, this will leave vital data and business logic in the cloud. So, there will often be times when a company will need to integrate its existing enterprise systems with the Salesforce platform. This is why this project will be focusing on the most common way to connect .NET applications to SalesForce for data retrieval and execution of application logic.
+The key feature of Salesforce is its straightforward manner of extending functionality. Business power users can create new data storage objects, pages, views and reports to support their business. As you can imagine, this will leave vital data and business logic in the cloud. So, there will often be times when a company will need to integrate its existing enterprise systems with the Salesforce platform. This is why this sample application will be focusing on the most common way to connect .NET applications to SalesForce for data retrieval and execution of application logic.
 
 Some of the use cases when this kind of project can be used:
 - Pre-populate forms and web pages with SalesForce data.
 - Push completed forms and web pages into one or more objects in SalesForce.
-- Enable third party software to access or update Salesforce data e.g. Accounting and DMS systems.
-- Expose Salesforce data, documents or reports to selected website users.
-- Enable back end functionality to set and get Salesforce data as needed.
+- Enable third party software to access or update SalesForce data.
+- Expose SalesForce data such as documents or reports to selected website users.
+- Enable back end functionality to set and get SalesForce data as needed.
 - Have an API to pull data and then access third party system e.g. retrieve customer data from SalesForce and use that CustomerID to query the SAP system to retrieve all products for that customer.
 
 
