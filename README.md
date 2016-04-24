@@ -9,8 +9,6 @@ The SalesForce Toolkits for .NET provide native libraries for interacting with S
 
 **How can this be useful to you or your organization ?**
 
-![](http://i.imgur.com/sMHHV7o.jpg)
-
 The key feature of Salesforce is its straightforward manner of extending functionality. Business power users can create new data storage objects, pages, views and reports to support their business. As you can imagine, this will leave vital data and business logic in the cloud. So, there will often be times when a company will need to integrate its existing enterprise systems with the Salesforce platform. This is why this project will be focusing on the most common way to connect .NET applications to SalesForce for data retrieval and execution of application logic.
 
 Some of the use cases when this kind of project can be used:
