@@ -1,7 +1,9 @@
 
 #  Customer Centric Web Application with SalesForce & ASP.NET MVC
 
-https://ci.appveyor.com/api/projects/status/y8lqxd7py6ggqne1?svg=true
+<a href="https://ci.appveyor.com/api/projects/status/y8lqxd7py6ggqne1?svg=true">
+<img src="https://ci.appveyor.com/api/projects/status/y8lqxd7py6ggqne1?svg=true" />
+</a>
 
 ----------
 ### About the project
