@@ -2,7 +2,3 @@ configuration: Release
 
 before build:
  -nuget restore
- 
- build:
-  verbosity: minimal
-  publish_wap: true
