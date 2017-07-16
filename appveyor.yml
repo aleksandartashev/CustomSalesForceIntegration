@@ -1,4 +1,10 @@
+version: 1.0.{build}
+
 configuration: Release
 
-before build:
- -nuget restore
+before_build:
+- nuget restore
+
+build:
+ verbosity: minimal
+ publish_wap: true
