@@ -11,7 +11,7 @@
 This solution represents my implementation of an ASP.NET MVC application with the [SalesForce.NET Toolkit](https://github.com/developerforce/Force.com-Toolkit-for-NET). It's primary purpose is to give developers some more info on how the toolkit can be used in an MVC application using the async/await pattern.
 The SalesForce Toolkits for .NET provide native libraries for interacting with SalesForce APIs, including the REST API and Chatter API. These toolkits make it super simple to consume services from SalesForce within .NET applications by packaging them up as NuGet packages, thus handling deployment and versioning. 
 
-**How can this be useful to you or your organization ?**
+**How can this be useful to you or your organization?**
 
 The key feature of Salesforce is its straightforward manner of extending functionality. Business power users can create new data storage objects, pages, views and reports to support their business. As you can imagine, this will leave vital data and business logic in the cloud. So, there will often be times when a company will need to integrate its existing enterprise systems with the Salesforce platform. This is why this sample application will be focusing on the most common way to connect .NET applications to SalesForce for data retrieval and execution of application logic.
 
